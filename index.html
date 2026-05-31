@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChoreMate - Smart Household Management</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<title>ChoreMate - Household & Task Management</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -16,9 +18,9 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-background:#f8fafc;
-color:#1e293b;
-line-height:1.6;
+background:#ffffff;
+color:#111827;
+overflow-x:hidden;
 }
 
 .container{
@@ -28,99 +30,100 @@ margin:auto;
 }
 
 .hero{
-background:linear-gradient(135deg,#2563eb,#7c3aed);
-color:white;
-padding:80px 20px;
+padding:40px 0 100px;
+background:linear-gradient(
+135deg,
+#ffffff,
+#f7f7ff
+);
 }
 
-.nav{
+nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:60px;
+margin-bottom:70px;
 }
 
 .logo{
+display:flex;
+align-items:center;
+gap:12px;
 font-size:28px;
 font-weight:800;
+}
+
+.logo img{
+height:60px;
+width:60px;
+border-radius:16px;
 }
 
 .hero-content{
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:40px;
+gap:60px;
 flex-wrap:wrap;
 }
 
 .hero-text{
 flex:1;
-min-width:300px;
+min-width:320px;
 }
 
 .hero-text h1{
-font-size:56px;
-line-height:1.1;
+font-size:60px;
+line-height:1.05;
 margin-bottom:20px;
+font-weight:800;
 }
 
 .hero-text p{
 font-size:20px;
-opacity:0.9;
+color:#6b7280;
 margin-bottom:30px;
 }
 
 .btn{
 display:inline-block;
-padding:14px 28px;
-background:white;
-color:#2563eb;
+padding:16px 32px;
+background:#6366f1;
+color:white;
 text-decoration:none;
-border-radius:12px;
+border-radius:14px;
 font-weight:700;
 transition:0.3s;
 }
 
 .btn:hover{
-transform:translateY(-2px);
+transform:translateY(-3px);
 }
 
-.phone{
-width:320px;
-background:white;
+.hero-image{
+flex:1;
+text-align:center;
+}
+
+.hero-image img{
+width:280px;
 border-radius:30px;
-padding:15px;
-box-shadow:0 20px 50px rgba(0,0,0,0.25);
-}
-
-.phone-screen{
-background:#f1f5f9;
-height:600px;
-border-radius:20px;
-padding:20px;
-}
-
-.task{
-background:white;
-padding:15px;
-margin-bottom:12px;
-border-radius:12px;
-box-shadow:0 3px 8px rgba(0,0,0,0.05);
+box-shadow:0 25px 50px rgba(0,0,0,.15);
 }
 
 .section{
-padding:90px 20px;
+padding:90px 0;
 }
 
 .section-title{
-text-align:center;
 font-size:42px;
-margin-bottom:20px;
+text-align:center;
+margin-bottom:15px;
 }
 
-.section-subtitle{
+.section-sub{
 text-align:center;
-color:#64748b;
+color:#6b7280;
 margin-bottom:50px;
 }
 
@@ -131,181 +134,229 @@ gap:25px;
 }
 
 .card{
-background:white;
 padding:30px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,0.06);
+border-radius:24px;
+background:#ffffff;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 .card h3{
 margin-bottom:10px;
 }
 
-.how{
+.card p{
+color:#6b7280;
+}
+
+.gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.gallery img{
+width:100%;
+border-radius:30px;
+box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
+
+.audience{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
-.step{
+.audience-card{
+padding:35px;
 background:white;
-padding:30px;
-border-radius:18px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.06);
-}
-
-.step-number{
-font-size:32px;
-font-weight:800;
-color:#2563eb;
-margin-bottom:10px;
 }
 
 .cta{
-background:linear-gradient(135deg,#2563eb,#7c3aed);
-color:white;
+background:linear-gradient(
+135deg,
+#6366f1,
+#7c3aed
+);
+padding:100px 20px;
 text-align:center;
-padding:80px 20px;
+color:white;
 }
 
 .cta h2{
-font-size:42px;
-margin-bottom:20px;
+font-size:48px;
+margin-bottom:15px;
+}
+
+.cta p{
+margin-bottom:25px;
+font-size:18px;
 }
 
 .footer{
-text-align:center;
 padding:30px;
-color:#64748b;
+text-align:center;
+color:#6b7280;
 }
 
 @media(max-width:768px){
 
 .hero-text h1{
-font-size:40px;
+font-size:42px;
 }
 
 .hero-content{
 flex-direction:column;
 }
 
-.phone{
-width:100%;
-max-width:340px;
+.hero-image img{
+width:240px;
+}
+
+.cta h2{
+font-size:34px;
 }
 }
+
 </style>
 </head>
 
 <body>
 
 <section class="hero">
+
 <div class="container">
 
-<div class="nav">
-<div class="logo">🧹 ChoreMate</div>
+<nav>
+
+<div class="logo">
+<img src="images/logo.png" alt="ChoreMate">
+<span>ChoreMate</span>
 </div>
+
+</nav>
 
 <div class="hero-content">
 
 <div class="hero-text">
-<h1>Never Argue About Chores Again</h1>
+
+<h1>
+Manage Tasks & Shared Households
+Without the Chaos
+</h1>
 
 <p>
-ChoreMate helps students, roommates, families and busy households organize chores, assign tasks and stay accountable.
+Create personal tasks, manage household responsibilities,
+invite members, schedule reminders and stay organized together.
 </p>
 
-<a href="YOUR_GOOGLE_FORM_LINK" class="btn">
+<a href="#" class="btn">
 Join Beta
 </a>
+
 </div>
 
-<div class="phone">
-
-<div class="phone-screen">
-<h3>Today's Tasks</h3>
-
-<div class="task">✅ Wash Dishes</div>
-<div class="task">🧺 Laundry</div>
-<div class="task">🗑️ Take Out Trash</div>
-<div class="task">🧹 Vacuum Living Room</div>
-<div class="task">🛒 Grocery Shopping</div>
+<div class="hero-image">
+<img src="images/task-creation.jpg" alt="Task Creation">
 </div>
 
 </div>
 
 </div>
-</div>
+
 </section>
 
 <section class="section">
 
 <div class="container">
 
-<h2 class="section-title">Why ChoreMate?</h2>
+<h2 class="section-title">
+Why ChoreMate?
+</h2>
 
-<p class="section-subtitle">
-Everything your household needs in one place.
+<p class="section-sub">
+Everything you need to manage tasks and household responsibilities.
 </p>
 
 <div class="features">
 
 <div class="card">
-<h3>🧹 Assign Chores</h3>
-<p>Create and assign tasks in seconds.</p>
+<h3>📝 Personal Tasks</h3>
+<p>Create recurring tasks, reminders and priorities.</p>
 </div>
 
 <div class="card">
-<h3>⏰ Smart Reminders</h3>
-<p>Never forget important household work.</p>
+<h3>🏠 Household Management</h3>
+<p>Organize your family or roommate household.</p>
 </div>
 
 <div class="card">
-<h3>📊 Track Progress</h3>
-<p>See who completed tasks and stay accountable.</p>
+<h3>👥 Invite Members</h3>
+<p>Add household members and collaborate together.</p>
 </div>
 
 <div class="card">
-<h3>👨‍👩‍👧‍👦 Shared Households</h3>
-<p>Manage chores with family, roommates and friends.</p>
+<h3>⏰ Smart Scheduling</h3>
+<p>Daily, weekly and custom recurring schedules.</p>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
-<section class="section" style="background:#eef2ff;">
+<section class="section" style="background:#f8fafc;">
 
 <div class="container">
 
-<h2 class="section-title">How It Works</h2>
+<h2 class="section-title">
+See ChoreMate In Action
+</h2>
 
-<div class="how">
+<p class="section-sub">
+Real screenshots from the app.
+</p>
 
-<div class="step">
-<div class="step-number">1</div>
-<h3>Create Household</h3>
-<p>Set up your home or shared apartment.</p>
+<div class="gallery">
+
+<img src="images/task-creation.jpg">
+
+<img src="images/household.jpg">
+
+<img src="images/invite-member.jpg">
+
 </div>
 
-<div class="step">
-<div class="step-number">2</div>
-<h3>Invite Members</h3>
-<p>Add roommates or family members.</p>
 </div>
 
-<div class="step">
-<div class="step-number">3</div>
-<h3>Assign Tasks</h3>
-<p>Distribute responsibilities fairly.</p>
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Perfect For
+</h2>
+
+<div class="audience">
+
+<div class="audience-card">
+<h3>🎓 Students</h3>
+<p>Manage study routines and personal tasks.</p>
 </div>
 
-<div class="step">
-<div class="step-number">4</div>
-<h3>Stay Organized</h3>
-<p>Track progress and build routines.</p>
+<div class="audience-card">
+<h3>🏠 Roommates</h3>
+<p>Split chores and responsibilities fairly.</p>
+</div>
+
+<div class="audience-card">
+<h3>👨‍👩‍👧‍👦 Families</h3>
+<p>Keep the entire household organized.</p>
 </div>
 
 </div>
@@ -316,20 +367,22 @@ Everything your household needs in one place.
 
 <section class="cta">
 
-<h2>Ready to Simplify Household Management?</h2>
+<h2>
+Ready To Get Organized?
+</h2>
 
-<p style="margin-bottom:25px;">
-Join the ChoreMate beta and help shape the future of home organization.
+<p>
+Join ChoreMate Beta and help shape the future of household management.
 </p>
 
-<a href="YOUR_GOOGLE_FORM_LINK" class="btn">
+<a href="#" class="btn" style="background:white;color:#6366f1;">
 Get Early Access
 </a>
 
 </section>
 
 <footer class="footer">
-© 2025 ChoreMate • Built for students, roommates & families
+© 2025 ChoreMate • Built for Students, Roommates & Families
 </footer>
 
 </body>
